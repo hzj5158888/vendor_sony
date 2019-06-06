@@ -42,6 +42,8 @@ PRODUCT_COPY_FILES += \
 	vendor/sony/rhine-common/proprietary/vendor/bin/ta_param_loader:system/vendor/bin/ta_param_loader \
 	vendor/sony/rhine-common/proprietary/vendor/bin/ta_qmi_service:system/vendor/bin/ta_qmi_service \
 	vendor/sony/rhine-common/proprietary/vendor/bin/updatemiscta:system/vendor/bin/updatemiscta \
+	vendor/sony/rhine-common/proprietary/vendor/bin/iop:system/vendor/bin/iop\
+	vendor/sony/rhine-common/proprietary/etc/permissions/com.qualcomm.qti.Performance.xml:system/etc/permissions/com.qualcomm.qti.Performance.xml \
     	vendor/sony/rhine-common/proprietary/etc/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Bluetooth_cal.acdb \
     	vendor/sony/rhine-common/proprietary/etc/acdbdata/Fluid/Fluid_General_cal.acdb:system/etc/acdbdata/Fluid/Fluid_General_cal.acdb \
     	vendor/sony/rhine-common/proprietary/etc/acdbdata/Fluid/Fluid_Global_cal.acdb:system/etc/acdbdata/Fluid/Fluid_Global_cal.acdb \
@@ -229,6 +231,9 @@ PRODUCT_COPY_FILES += \
 	vendor/sony/rhine-common/proprietary/lib/libsony_face.so:system/lib/libsony_face.so \
 	vendor/sony/rhine-common/proprietary/lib/libstartup-reason.so:system/lib/libstartup-reason.so \
 	vendor/sony/rhine-common/proprietary/lib/lib_uncontrolled_rooting_status.so:system/lib/lib_uncontrolled_rooting_status.so \
+	vendor/sony/rhine-common/proprietary/lib/libqti-iop.so:system/lib/libqti-iop.so \
+	vendor/sony/rhine-common/proprietary/lib/libqti-iop-client.so:system/lib/libqti-iop-client.so \
+	vendor/sony/rhine-common/proprietary/lib/libqti_performance.so:system/lib/libqti_performance.so \
 	vendor/sony/rhine-common/proprietary/vendor/camera/flash.dat:system/vendor/camera/flash.dat \
 	vendor/sony/rhine-common/proprietary/vendor/camera/jpeg_fsc.dat:system/vendor/camera/jpeg_fsc.dat \
 	vendor/sony/rhine-common/proprietary/vendor/camera/LGI02BN1/cam_ctrl.dat:system/vendor/camera/LGI02BN1/cam_ctrl.dat \
@@ -577,4 +582,7 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     libta \
     tad_static \
-    wait4tad_static
+    wait4tad_static \
+    QPerformance
+
+PRODUCT_BOOT_JARS += QPerformance
